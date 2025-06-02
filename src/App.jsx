@@ -1,3 +1,5 @@
+import reactLogo from "./assets/react.svg";
+
 const greets = ["Hello", "Hi", "Hey"];
 
 function genRandomInt(max) {
@@ -6,7 +8,12 @@ function genRandomInt(max) {
 
 function App() {
   const greet = greets[genRandomInt(2)];
-  return <h1>{greet}, from React</h1>;
+  return (
+    <>
+      <img src={reactLogo} alt="react logo" />
+      <h1>{greet}, from React</h1>
+    </>
+  );
 }
 
 export default App;
