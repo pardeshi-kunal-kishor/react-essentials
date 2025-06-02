@@ -1,5 +1,5 @@
 import reactLogo from "./assets/react.svg";
-import User from "./User";
+import User from "./components/User";
 import userData from "./user.json";
 
 const greets = ["Hello", "Hi", "Hey"];

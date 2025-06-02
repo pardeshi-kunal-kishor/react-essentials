@@ -1,3 +1,5 @@
+import "./User.css";
+
 function User({ id, name }) {
   return (
     <>
