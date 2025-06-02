@@ -1,8 +1,8 @@
-function User(props) {
+function User({ id, name }) {
   return (
     <>
-      <h1>{props.id}</h1>
-      <p>{props.name}</p>
+      <h1>{id}</h1>
+      <p>{name}</p>
     </>
   );
 }
