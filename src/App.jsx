@@ -1,4 +1,5 @@
 import reactLogo from "./assets/react.svg";
+import TabButton from "./components/TabButton";
 import User from "./components/User";
 import userData from "./user.json";
 
@@ -22,6 +23,11 @@ function App() {
           </li>
         ))}
       </ul>
+      <menu>
+        <TabButton>Button 1</TabButton>
+        <TabButton>Button 2</TabButton>
+        <TabButton>Button 3</TabButton>
+      </menu>
     </>
   );
 }
