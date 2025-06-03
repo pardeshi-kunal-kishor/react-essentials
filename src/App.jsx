@@ -12,6 +12,10 @@ function genRandomInt(max) {
 function App() {
   const greet = greets[genRandomInt(2)];
 
+  function handleSelect(selectedButton) {
+    console.log(selectedButton);
+  }
+
   return (
     <>
       <img src={reactLogo} alt="react logo" />
@@ -24,9 +28,9 @@ function App() {
         ))}
       </ul>
       <menu>
-        <TabButton>Button 1</TabButton>
-        <TabButton>Button 2</TabButton>
-        <TabButton>Button 3</TabButton>
+        <TabButton onSelect={() => handleSelect("button1")}>Button 1</TabButton>
+        <TabButton onSelect={() => handleSelect("button2")}>Button 2</TabButton>
+        <TabButton onSelect={() => handleSelect("button3")}>Button 3</TabButton>
       </menu>
     </>
   );
