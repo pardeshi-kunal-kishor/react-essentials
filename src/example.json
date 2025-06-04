@@ -1,0 +1,14 @@
+{
+  "button1": {
+    "title": "button 1",
+    "value": 10
+  },
+  "button2": {
+    "title": "button 2",
+    "value": 20
+  },
+  "button3": {
+    "title": "button 3",
+    "value": 30
+  }
+}

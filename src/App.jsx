@@ -3,6 +3,7 @@ import TabButton from "./components/TabButton";
 import User from "./components/User";
 import userData from "./user.json";
 import { useState } from "react";
+import Example from "./example.json";
 
 const greets = ["Hello", "Hi", "Hey"];
 
@@ -11,8 +12,9 @@ function genRandomInt(max) {
 }
 
 function App() {
-  const [selectedText, setSelectedText] = useState("please click a button");
+  const [selectedText, setSelectedText] = useState("button1");
   const greet = greets[genRandomInt(2)];
+  const { title, value } = Example[selectedText];
 
   function handleSelect(selectedButton) {
     setSelectedText(selectedButton);
@@ -39,7 +41,8 @@ function App() {
         <TabButton onSelect={() => handleSelect("button2")}>Button 2</TabButton>
         <TabButton onSelect={() => handleSelect("button3")}>Button 3</TabButton>
       </menu>
-      {selectedText}
+      <p>title: {title}</p>
+      <p>value: {value}</p>
     </>
   );
 }
