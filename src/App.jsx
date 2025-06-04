@@ -2,6 +2,7 @@ import reactLogo from "./assets/react.svg";
 import TabButton from "./components/TabButton";
 import User from "./components/User";
 import userData from "./user.json";
+import { useState } from "react";
 
 const greets = ["Hello", "Hi", "Hey"];
 
@@ -10,11 +11,17 @@ function genRandomInt(max) {
 }
 
 function App() {
+  const [selectedText, setSelectedText] = useState("please click a button");
   const greet = greets[genRandomInt(2)];
 
   function handleSelect(selectedButton) {
-    console.log(selectedButton);
+    setSelectedText(selectedButton);
+    console.log("fun inside for handleSelect: ", selectedText); // updated state will not reflect here, until react execute the App component
   }
+
+  (function () {
+    console.log("fun inside for loop: ", selectedText); // this will always execute upon execution of App component, hence always has updated state.
+  })();
 
   return (
     <>
@@ -32,6 +39,7 @@ function App() {
         <TabButton onSelect={() => handleSelect("button2")}>Button 2</TabButton>
         <TabButton onSelect={() => handleSelect("button3")}>Button 3</TabButton>
       </menu>
+      {selectedText}
     </>
   );
 }
