@@ -44,9 +44,9 @@ function App() {
         ))}
       </ul>
       <menu>
-        <TabButton onSelect={() => handleSelect("button1")}>Button 1</TabButton>
-        <TabButton onSelect={() => handleSelect("button2")}>Button 2</TabButton>
-        <TabButton onSelect={() => handleSelect("button3")}>Button 3</TabButton>
+        <TabButton onClick={() => handleSelect("button1")}>Button 1</TabButton>
+        <TabButton onClick={() => handleSelect("button2")}>Button 2</TabButton>
+        <TabButton onClick={() => handleSelect("button3")}>Button 3</TabButton>
       </menu>
       {description}
     </>
