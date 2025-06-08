@@ -45,7 +45,7 @@ function App() {
         ))}
       </ul>
       <Tabs
-        buttonsContainer="menu" // can pass a custom components as: buttonsContainer={Component}
+        // buttonsContainer="menu" // can pass a custom components as: buttonsContainer={Component}
         buttons={
           <>
             <TabButton onClick={() => handleSelect("button1")}>
