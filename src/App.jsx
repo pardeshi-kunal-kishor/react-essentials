@@ -4,6 +4,7 @@ import User from "./components/User";
 import userData from "./user.json";
 import { useState } from "react";
 import Example from "./example.json";
+import Tabs from "./components/Tabs";
 
 const greets = ["Hello", "Hi", "Hey"];
 
@@ -43,12 +44,23 @@ function App() {
           </li>
         ))}
       </ul>
-      <menu>
-        <TabButton onClick={() => handleSelect("button1")}>Button 1</TabButton>
-        <TabButton onClick={() => handleSelect("button2")}>Button 2</TabButton>
-        <TabButton onClick={() => handleSelect("button3")}>Button 3</TabButton>
-      </menu>
-      {description}
+      <Tabs
+        buttons={
+          <>
+            <TabButton onClick={() => handleSelect("button1")}>
+              Button 1
+            </TabButton>
+            <TabButton onClick={() => handleSelect("button2")}>
+              Button 2
+            </TabButton>
+            <TabButton onClick={() => handleSelect("button3")}>
+              Button 3
+            </TabButton>
+          </>
+        }
+      >
+        {description}
+      </Tabs>
     </>
   );
 }
